@@ -15,7 +15,7 @@ document.body.addEventListener("mousemove", () => {
   clearTimeout(mouseMoveTimeout);
   mouseMoveTimeout = setTimeout(() => {
     video.pause(); // Pausa el video si el mouse está quieto
-  }, 0); // Pausa después de 2 segundos sin movimiento
+  }, 100); // Pausa después de 0.1 segundos sin movimiento
 });
 
 // Pausa el video cuando el mouse sale del cuerpo
