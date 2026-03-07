@@ -8,7 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+# dist  # Comentado para permitir archivos compilados en la raíz
 dist-ssr
 *.local
 
