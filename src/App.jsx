@@ -15,7 +15,7 @@ import Tictactoe from "./components/tictactoe.jsx";
 
 const App = () => {
   return (
-    <Router basename="/portafolio">
+    <Router basename="/Portafolio-React">
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />
