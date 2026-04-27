@@ -1,9 +1,119 @@
-import  { useState, useEffect } from "react";
+
+import React, { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
+import NavBarHeader from "./NavBarHeader.jsx";
 import AboutMe from "./AboutMe.jsx";
 import Home from "./home.jsx";
 import Project from "./Projects.jsx";
 import "./Contact.css";
+
+// Formulario de contacto reutilizable
+const initialState = {
+  nombre: "",
+  apellido: "",
+  correo: "",
+  numero: "",
+  requerimientos: "",
+  errors: {},
+};
+
+function validate(values) {
+  const errors = {};
+  if (!values.nombre) errors.nombre = "El nombre es requerido";
+  if (!values.apellido) errors.apellido = "El apellido es requerido";
+  if (!values.correo) {
+    errors.correo = "El correo es requerido";
+  } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(values.correo)) {
+    errors.correo = "Correo inválido";
+  }
+  if (!values.numero) {
+    errors.numero = "El número es requerido";
+  } else if (!/^\d{7,15}$/.test(values.numero.replace(/\D/g, ""))) {
+    errors.numero = "Número inválido";
+  }
+  if (!values.requerimientos) errors.requerimientos = "Este campo es requerido";
+  return errors;
+}
+
+const ContactForm = () => {
+  const [values, setValues] = React.useState(initialState);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const errors = validate(values);
+    if (Object.keys(errors).length === 0) {
+      alert("¡Formulario enviado! (demo)");
+      setValues(initialState);
+    } else {
+      setValues((prev) => ({ ...prev, errors }));
+    }
+  };
+
+  return (
+    <form className="contact-form" onSubmit={handleSubmit} autoComplete="off">
+      <label>
+        Nombre:
+        <input
+          type="text"
+          name="nombre"
+          value={values.nombre}
+          onChange={handleChange}
+          required
+        />
+        {values.errors.nombre && <span className="error">{values.errors.nombre}</span>}
+      </label>
+      <label>
+        Apellido:
+        <input
+          type="text"
+          name="apellido"
+          value={values.apellido}
+          onChange={handleChange}
+          required
+        />
+        {values.errors.apellido && <span className="error">{values.errors.apellido}</span>}
+      </label>
+      <label>
+        Correo:
+        <input
+          type="email"
+          name="correo"
+          value={values.correo}
+          onChange={handleChange}
+          required
+        />
+        {values.errors.correo && <span className="error">{values.errors.correo}</span>}
+      </label>
+      <label>
+        Número:
+        <input
+          type="tel"
+          name="numero"
+          value={values.numero}
+          onChange={handleChange}
+          required
+        />
+        {values.errors.numero && <span className="error">{values.errors.numero}</span>}
+      </label>
+      <label>
+        Requerimientos:
+        <textarea
+          name="requerimientos"
+          value={values.requerimientos}
+          onChange={handleChange}
+          required
+        />
+        {values.errors.requerimientos && <span className="error">{values.errors.requerimientos}</span>}
+      </label>
+      <button type="submit">Enviar</button>
+    </form>
+  );
+};
 
 export const Contact = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -56,35 +166,7 @@ const Contacts = () => {
         <div id="site-border-right"></div>
         <div id="site-border-top"></div>
         <div id="site-border-bottom"></div>
-        <header>
-          <nav className="navbar  navbar-fixed-top navbar-default">
-            <div className="container">
-              <button
-                type="button"
-                className="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#navbar-collapse"
-                aria-expanded="false"
-              ></button>
-              <div className="collapse navbar-collapse" id="navbar-collapse">
-                <ul className="nav navbar-nav ">
-                  <li>
-                    <Link to="/">01 : Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/works">02 : Works</Link>
-                  </li>
-                  <li>
-                    <Link to="/about">03 : AboutMe</Link>
-                  </li>
-                  <li>
-                    <Link to="/contact">04 : Contact</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
+        <NavBarHeader />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -101,14 +183,7 @@ const Contacts = () => {
                   <Contact />
                 </div>
 
-                <div
-                  className="contact-container"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                  }}
-                >
+                <div className="contact-container" style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
                   <ul className="list-unstyled">
                     <li className="icon-text">
                       <span className="fa-icon">
@@ -117,9 +192,7 @@ const Contacts = () => {
                       <b>elianbarra@gmail.com</b>
                     </li>
                   </ul>
-                  <div className="contact-form">
-                      Form to contact soon...
-                  </div>
+                  <ContactForm />
                 </div>
               </div>
             </div>
@@ -129,5 +202,3 @@ const Contacts = () => {
     </div>
   );
 };
-
-export default Contacts;

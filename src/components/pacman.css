@@ -31,12 +31,12 @@
 
       .sushi {
           background-color: black;
-          background-image: url('../assets/images/sushi.png');
+          background-image: url('/images/sushi.png');
       }
 
       .onigiri {
           background-color: black;
-          background-image: url('../assets/images/onigiri.png');
+          background-image: url('/images/onigiri.png');
       }
 
       .blank,
@@ -45,7 +45,7 @@
       }
 
       #ninjaman {
-          background-image: url('../assets/images/ninja.gif');
+          background-image: url('/images/ninja.gif');
           position: absolute;
       }
 

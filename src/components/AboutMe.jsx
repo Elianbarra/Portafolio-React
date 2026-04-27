@@ -1,15 +1,16 @@
+import NavBarHeader from "./NavBarHeader.jsx";
 import { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Contact from "./Contact.jsx";
 import Home from "./home.jsx";
 import Project from "./Projects.jsx";
 import "./Aboutme.css";
-import HTMLimage from "../assets/images/HTML5_logo_and_wordmark.svg.png";
-import Javaimage from "../assets/images/js-logo.webp.png";
-import Pythonimage from "../assets/images/Python_logo_51.svg.png";
-import react from "../assets/images/React.gif";
-import css from "../assets/images/css.png";
-import Java from "../assets/images/java-4.svg";
+const HTMLimage = "/images/HTML5_logo_and_wordmark.svg.png";
+const Javaimage = "/images/js-logo.webp.png";
+const Pythonimage = "/images/Python_logo_51.svg.png";
+const react = "/images/React.gif";
+const css = "/images/css.png";
+const Java = "/images/java-4.svg";
 
 const AnimatedText = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -60,35 +61,7 @@ const AboutMe = () => {
         <div id="site-border-right"></div>
         <div id="site-border-top"></div>
         <div id="site-border-bottom"></div>
-        <header>
-          <nav className="navbar  navbar-fixed-top navbar-default">
-            <div className="container">
-              <button
-                type="button"
-                className="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#navbar-collapse"
-                aria-expanded="false"
-              ></button>
-              <div className="collapse navbar-collapse" id="navbar-collapse">
-                <ul className="nav navbar-nav ">
-                  <li>
-                    <Link to="/">01 : Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/works">02 : Works</Link>
-                  </li>
-                  <li>
-                    <Link to="/about">03 : AboutMe</Link>
-                  </li>
-                  <li>
-                    <Link to="/contact">04 : Contact</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
+        <NavBarHeader />
 
         <Routes>
           <Route path="/" element={<Home />} />

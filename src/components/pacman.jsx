@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import NinjaImage from "../assets/images/ninja.gif"; // Asegúrate de reemplazar esto con la ruta correcta a tu imagen
-import "../assets/images/sushi.png";
-import fondo from "../assets/images/Fondo1.png";
+const NinjaImage = "/images/ninja.gif";
+import "/images/sushi.png";
+const fondo = "/images/Fondo1.png";
 import "./Front-End.css";
 import "./pacman.css";
 import { Routes, Route, Link } from "react-router-dom";

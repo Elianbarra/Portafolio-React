@@ -1,6 +1,7 @@
+import NavBarHeader from "./NavBarHeader.jsx";
 import { useState } from "react";
 import {  Link } from "react-router-dom";
-import fondo2 from "../assets/images/Fondo2.png";
+const fondo2 = "/images/Fondo2.png";
 import "./Calculadora.css";
 
 function Calculadora() {
@@ -36,28 +37,8 @@ function Calculadora() {
           <div id="site-border-right"></div>
           <div id="site-border-top"></div>
           <div id="site-border-bottom"></div>
-          <header>
-            <nav className="navbar  navbar-fixed-top navbar-default">
-              <div className="container">
-                <div className="collapse navbar-collapse" id="navbar-collapse">
-                  <ul className="nav navbar-nav ">
-                    <li>
-                      <Link to="/">01 : Home</Link>
-                    </li>
-                    <li>
-                      <Link to="/works">02 : Works</Link>
-                    </li>
-                    <li>
-                      <Link to="/about">03 : AboutMe</Link>
-                    </li>
-                    <li>
-                      <Link to="/contact">04 : Contact</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </header>
+          
+          <NavBarHeader />
 
           <div className="section-container">
             <div className="container">

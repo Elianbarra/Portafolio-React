@@ -1,3 +1,4 @@
+import NavBarHeader from "./NavBarHeader.jsx";
 import { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import AboutMe from "./AboutMe.jsx";
@@ -6,12 +7,12 @@ import Home from "./home.jsx";
 import Project from "./Projects.jsx";
 import "./Project.css";
 import "./Front-End.css";
-import calculatorImage from "../assets/images/Calculadora.png";
-import NinjaImage from "../assets/images/Ninja.png";
-import LoginImage from "../assets/images/Login.png";
-import gif from "../assets/images/gifs.png";
-import colores from "../assets/images/Colores.png";
-import tictactoe from "../assets/images/tictactoe.jpg";
+const calculatorImage = "/images/Calculadora.png";
+const NinjaImage = "/images/Ninja.png";
+const LoginImage = "/images/Login.png";
+const gif = "/images/gifs.png";
+const colores = "/images/Colores.png";
+const tictactoe = "/images/tictactoe.jpg";
 import Pacman from "./pacman.jsx";
 import Calculadora from "./Calculadora.jsx";
 import Login from "./Login.jsx";
@@ -80,28 +81,7 @@ const Projects = () => {
         <header>
           <nav className="navbar  navbar-fixed-top navbar-default">
             <div className="container">
-              <button
-                type="button"
-                className="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#navbar-collapse"
-                aria-expanded="false"
-              ></button>
-              <div className="collapse navbar-collapse" id="navbar-collapse">
-                <ul className="nav navbar-nav ">
-                  <li>
-                    <Link to="/">01 : Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/works">02 : Works</Link>
-                  </li>
-                  <li>
-                    <Link to="/about">03 : AboutMe</Link>
-                  </li>
-                  <li>
-                    <Link to="/contact">04 : Contact</Link>
-                  </li>
-                </ul>
+              <NavBarHeader />
               </div>
             </div>
           </nav>

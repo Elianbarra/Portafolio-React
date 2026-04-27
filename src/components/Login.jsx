@@ -1,3 +1,4 @@
+import NavBarHeader from "./NavBarHeader.jsx";
 import { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -5,7 +6,7 @@ import Contact from "./Contact.jsx";
 import Home from "./home.jsx";
 import Project from "./Projects.jsx";
 import AboutMe from "./AboutMe.jsx";
-import fondo2 from "../assets/images/Fondo2.png";
+const fondo2 = "/images/Fondo2.png";
 import "./Login.css";
 
 function Login() {
@@ -63,28 +64,7 @@ const handleRegister = (event) => {
           <div id="site-border-right"></div>
           <div id="site-border-top"></div>
           <div id="site-border-bottom"></div>
-          <header>
-            <nav className="navbar  navbar-fixed-top navbar-default">
-              <div className="container">
-                <div className="collapse navbar-collapse" id="navbar-collapse">
-                  <ul className="nav navbar-nav ">
-                    <li>
-                      <Link to="/">01 : Home</Link>
-                    </li>
-                    <li>
-                      <Link to="/works">02 : Works</Link>
-                    </li>
-                    <li>
-                      <Link to="/about">03 : AboutMe</Link>
-                    </li>
-                    <li>
-                      <Link to="/contact">04 : Contact</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </header>
+          <NavBarHeader />
 
           <div className="section-container">
             <div className="container">
