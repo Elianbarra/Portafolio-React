@@ -6,7 +6,7 @@ import Contact from "./Contact.jsx";
 import Home from "./home.jsx";
 import Project from "./Projects.jsx";
 import AboutMe from "./AboutMe.jsx";
-const fondo2 = "/images/Fondo2.png";
+const fondo2 = `${import.meta.env.BASE_URL}images/Fondo2.png`;
 import "./Login.css";
 
 function Login() {

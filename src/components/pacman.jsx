@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-const NinjaImage = "/images/ninja.gif";
+const NinjaImage = `${import.meta.env.BASE_URL}images/ninja.gif`;
 import "/images/sushi.png";
-const fondo = "/images/Fondo1.png";
+const fondo = `${import.meta.env.BASE_URL}images/Fondo1.png`;
 import "./Front-End.css";
 import "./pacman.css";
 import { Routes, Route, Link } from "react-router-dom";

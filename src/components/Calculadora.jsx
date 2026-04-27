@@ -1,7 +1,7 @@
 import NavBarHeader from "./NavBarHeader.jsx";
 import { useState } from "react";
 import {  Link } from "react-router-dom";
-const fondo2 = "/images/Fondo2.png";
+const fondo2 = `${import.meta.env.BASE_URL}images/Fondo2.png`;
 import "./Calculadora.css";
 
 function Calculadora() {

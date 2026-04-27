@@ -5,12 +5,12 @@ import Contact from "./Contact.jsx";
 import Home from "./home.jsx";
 import Project from "./Projects.jsx";
 import "./Aboutme.css";
-const HTMLimage = "/images/HTML5_logo_and_wordmark.svg.png";
-const Javaimage = "/images/js-logo.webp.png";
-const Pythonimage = "/images/Python_logo_51.svg.png";
-const react = "/images/React.gif";
-const css = "/images/css.png";
-const Java = "/images/java-4.svg";
+const HTMLimage = `${import.meta.env.BASE_URL}images/HTML5_logo_and_wordmark.svg.png`;
+const Javaimage = `${import.meta.env.BASE_URL}images/js-logo.webp.png`;
+const Pythonimage = `${import.meta.env.BASE_URL}images/Python_logo_51.svg.png`;
+const react = `${import.meta.env.BASE_URL}images/React.gif`;
+const css = `${import.meta.env.BASE_URL}images/css.png`;
+const Java = `${import.meta.env.BASE_URL}images/java-4.svg`;
 
 const AnimatedText = () => {
   const [loopNum, setLoopNum] = useState(0);
