@@ -1,81 +1,41 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import Navbar from "./components/NavBar.jsx";
-import Hero from "./components/Hero.jsx";
-import AboutMe from "./components/AboutMe.jsx";
-import Projects from "./components/Projects.jsx";
-import Contacts from "./components/Contact.jsx";
-import Pacman from './components/pacman.jsx'; 
-import Calculadora from "./components/Calculadora.jsx";
-import Login from "./components/Login.jsx";
-import Gift from "./components/Gift.jsx";
-import Colors from "./components/Colors.jsx";
-import Register from "./components/register.jsx";
-import Tictactoe from "./components/tictactoe.jsx";
-import {createHashRouter, RouterProvider} from 'react-router-dom'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
 
-
-
+import RootLayout from "./layouts/RootLayout.jsx";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Projects from "./pages/Projects.jsx";
+import Contact from "./pages/Contact.jsx";
+import Pacman from "./pages/Playground/Pacman.jsx";
+import TicTacToe from "./pages/Playground/TicTacToe.jsx";
+import Calculator from "./pages/Playground/Calculator.jsx";
+import LoginDemo from "./pages/Playground/LoginDemo.jsx";
+import Colors from "./pages/Playground/Colors.jsx";
+import GifSearch from "./pages/Playground/GifSearch.jsx";
 
 const router = createHashRouter([
-  
   {
-    path: '/',
-    element: <Hero />,
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "about", element: <About /> },
+      { path: "works", element: <Projects /> },
+      { path: "contact", element: <Contact /> },
+      { path: "playground/pacman", element: <Pacman /> },
+      { path: "playground/tictactoe", element: <TicTacToe /> },
+      { path: "playground/calculator", element: <Calculator /> },
+      { path: "playground/login", element: <LoginDemo /> },
+      { path: "playground/colors", element: <Colors /> },
+      { path: "playground/gifs", element: <GifSearch /> },
+    ],
   },
-  {
-    path: '/Navbar',
-    element: <Navbar />,
-  },
-
-  {
-    path: '/about',
-    element: <AboutMe />,
-  },
-  {
-    path: '/works',
-    element: <Projects />,
-  },
-  {
-    path: '/contact',
-    element: <Contacts />,
-  },
-  {
-    path: '/pacman',
-    element: <Pacman />,
-  },
-  {
-    path: '/calculadora',
-    element: <Calculadora />,
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/gift',
-    element: <Gift />,
-  },
-  {
-    path: '/colors',
-    element: <Colors />,
-  },
-  {
-    path: '/register', 
-    element: <Register />,
-  
-  },
-  {
-    path: '/tictactoe',
-    element: <Tictactoe />,
-  },
-
-])
-
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

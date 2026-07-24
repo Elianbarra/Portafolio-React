@@ -1,8 +1,8 @@
 {
-  "name": "emojis",
+  "name": "portafolio-react",
   "private": true,
-  "homepage": "https://Elianbarra.github.io/portafolio",
-  "version": "0.0.0",
+  "homepage": "https://elianbarra.github.io/Portafolio-React",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,25 +14,24 @@
   },
   "dependencies": {
     "canvas-confetti": "1.9.3",
+    "framer-motion": "^11.11.17",
     "react": "^18.3.1",
-    "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
-    "react-on-screen": "^2.1.1",
     "react-router-dom": "^6.25.1",
-    "react-spring": "^9.7.3",
-    "react-tsparticles": "^2.12.2",
-    "tsparticles": "^3.8.1",
     "values.js": "^2.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "gh-pages": "^6.3.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
     "vite": "^5.4.10"
   }
 }

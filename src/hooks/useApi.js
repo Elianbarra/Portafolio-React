@@ -1,25 +1,21 @@
 import { useEffect, useState } from "react";
 
 const useApi = (url) => {
+  const [data, setData] = useState(null);
+  const [loaded, setLoaded] = useState(false);
 
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoaded(false);
+    fetch(url)
+      .then((response) => response.json())
+      .then((json) => {
+        setData(json.data);
+        setLoaded(true);
+      })
+      .catch((error) => console.error(error));
+  }, [url]);
 
-    const fetchApi = () => {
-        fetch(url)
-            .then(respuesta => respuesta.json())
-            .then(respuestaJson => {
-                setLoading(true);
-                setData(respuestaJson.data)
-            })
-            .catch(error => console.log(error))
-    }
+  return { loaded, data };
+};
 
-    useEffect(() => {
-        fetchApi();        
-    }, [url])
-
-    return { loading, data }
-}
- 
 export default useApi;
