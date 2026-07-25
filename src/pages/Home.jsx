@@ -1,84 +1,191 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import useTypewriter from "../hooks/useTypewriter.js";
-import projects from "../data/projects.js";
+import useLocalizedProjects from "../hooks/useLocalizedProjects.js";
+import skills from "../data/skills.js";
 import ProjectCard from "../components/ProjectCard.jsx";
 import SectionHeading from "../components/SectionHeading.jsx";
-
-const roles = ["Computer Engineering student.", "Web Developer.", "UI/UX Designer."];
+import SocialLinks from "../components/SocialLinks.jsx";
+import StatCounter from "../components/StatCounter.jsx";
+import TechMarquee from "../components/TechMarquee.jsx";
 
 const Home = () => {
+  const { t } = useTranslation();
+  const roles = t("roles", { returnObjects: true });
   const typedText = useTypewriter(roles);
+  const projects = useLocalizedProjects();
   const featured = projects.slice(0, 3);
+  const nextSectionRef = useRef(null);
+
+  const stats = [
+    { value: projects.length, suffix: "", label: t("stats.projectsBuilt") },
+    { value: skills.length, suffix: "", label: t("stats.coreTechnologies") },
+    { value: 1, suffix: "", label: t("stats.softwareInternship") },
+  ];
+
+  const scrollToNext = () => {
+    nextSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
-      <section className="section flex min-h-[calc(100vh-73px)] flex-col justify-center">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="eyebrow mb-6"
-        >
-          Hi, I&apos;m
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl"
-        >
-          Elian Barra
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-5 h-8 font-mono text-lg text-accent sm:text-2xl"
-        >
-          {typedText}
-          <span className="animate-pulse">_</span>
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-6 max-w-xl text-slate-400"
-        >
-          I build clean, functional web interfaces and enjoy turning small technical
-          challenges into working products — from games to API-driven tools.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-10 flex flex-wrap gap-4"
-        >
-          <Link to="/works" className="btn-primary">
-            View Projects
-          </Link>
-          <Link to="/contact" className="btn-secondary">
-            Get in Touch
-          </Link>
-        </motion.div>
+      <section className="relative overflow-hidden">
+        <div
+          aria-hidden="true"
+          className="animate-blob pointer-events-none absolute -left-24 top-10 -z-10 h-72 w-72 rounded-full bg-accent/20 blur-3xl"
+        />
+        <div
+          aria-hidden="true"
+          className="animate-blob pointer-events-none absolute -right-16 bottom-0 -z-10 h-80 w-80 rounded-full bg-accent-violet/20 blur-3xl"
+          style={{ animationDelay: "-6s" }}
+        />
+
+        <div className="section relative flex min-h-[calc(100vh-73px)] flex-col justify-center">
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="eyebrow mb-6"
+          >
+            {t("hero.greeting")}
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl"
+          >
+            Elian Barra
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-5 h-8 font-mono text-lg text-accent sm:text-2xl"
+          >
+            {typedText}
+            <span className="animate-pulse">_</span>
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-6 max-w-xl text-slate-400"
+          >
+            {t("hero.description")}
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-10 flex flex-wrap items-center gap-6"
+          >
+            <div className="flex flex-wrap gap-4">
+              <Link to="/works" className="btn-primary">
+                {t("hero.viewProjects")}
+              </Link>
+              <Link to="/contact" className="btn-secondary">
+                {t("hero.getInTouch")}
+              </Link>
+            </div>
+            <SocialLinks />
+          </motion.div>
+
+          <motion.button
+            type="button"
+            onClick={scrollToNext}
+            aria-label="Scroll to content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: [0, 8, 0] }}
+            transition={{ opacity: { duration: 0.6, delay: 0.8 }, y: { duration: 1.8, repeat: Infinity } }}
+            className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 text-slate-500 transition hover:text-accent sm:block"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-7 w-7">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+            </svg>
+          </motion.button>
+        </div>
       </section>
 
-      <section className="section pt-0">
-        <SectionHeading
-          eyebrow="Featured"
-          title="A few things I've built"
-          description="Small, self-contained projects built to practice React patterns, game logic and API integration."
-        />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((project, index) => (
-            <ProjectCard key={project.slug} project={project} index={index} />
-          ))}
+      <section ref={nextSectionRef} className="border-t border-white/5">
+        <div className="section py-16">
+          <div className="grid gap-6 sm:grid-cols-3">
+            {stats.map((stat) => (
+              <StatCounter key={stat.label} {...stat} />
+            ))}
+          </div>
         </div>
-        <div className="mt-10">
-          <Link to="/works" className="btn-secondary">
-            See all projects
+      </section>
+
+      <section className="border-t border-white/5">
+        <div className="section py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="max-w-2xl"
+          >
+            <p className="eyebrow mb-3">{t("home.aboutEyebrow")}</p>
+            <h2 className="heading-lg">{t("home.aboutTitle")}</h2>
+            <p className="mt-5 text-slate-400">{t("home.aboutText")}</p>
+            <Link to="/about" className="btn-secondary mt-6 inline-flex">
+              {t("home.moreAboutMe")}
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mt-16 min-w-0"
+          >
+            <p className="mb-4 font-mono text-xs uppercase tracking-widest text-slate-500">
+              {t("home.techIWorkWith")}
+            </p>
+            <TechMarquee />
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/5">
+        <div className="section">
+          <SectionHeading
+            eyebrow={t("home.featuredEyebrow")}
+            title={t("home.featuredTitle")}
+            description={t("home.featuredDescription")}
+          />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featured.map((project, index) => (
+              <ProjectCard key={project.slug} project={project} index={index} />
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link to="/works" className="btn-secondary">
+              {t("home.seeAllProjects")}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/5">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="section flex flex-col items-center py-24 text-center"
+        >
+          <p className="eyebrow mb-4">{t("home.ctaEyebrow")}</p>
+          <h2 className="heading-xl max-w-2xl">{t("home.ctaTitle")}</h2>
+          <p className="mt-4 max-w-md text-slate-400">{t("home.ctaDescription")}</p>
+          <Link to="/contact" className="btn-primary mt-8">
+            {t("home.ctaButton")}
           </Link>
-        </div>
+        </motion.div>
       </section>
     </>
   );

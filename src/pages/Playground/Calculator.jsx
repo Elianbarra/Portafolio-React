@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import PlaygroundShell from "../../components/PlaygroundShell.jsx";
 import evaluateExpression from "../../utils/evaluateExpression.js";
 
@@ -13,6 +14,7 @@ const BUTTONS = [
 const isOperator = (label) => ["/", "*", "-", "+"].includes(label);
 
 const Calculator = () => {
+  const { t } = useTranslation();
   const [display, setDisplay] = useState("");
 
   const handlePress = (label) => {
@@ -24,7 +26,7 @@ const Calculator = () => {
       try {
         setDisplay(String(evaluateExpression(display)));
       } catch {
-        setDisplay("Error");
+        setDisplay(t("playground.calculator.error"));
         setTimeout(() => setDisplay(""), 1500);
       }
     } else {
@@ -33,7 +35,7 @@ const Calculator = () => {
   };
 
   return (
-    <PlaygroundShell title="Calculator" description="A basic calculator supporting +, -, *, / and parentheses.">
+    <PlaygroundShell title={t("playground.calculator.title")} description={t("playground.calculator.description")}>
       <div className="mx-auto w-full max-w-xs">
         <div className="card mb-4 flex h-16 items-center justify-end overflow-x-auto px-4 font-mono text-2xl text-white">
           {display || "0"}

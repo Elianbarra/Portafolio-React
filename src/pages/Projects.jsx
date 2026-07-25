@@ -1,20 +1,26 @@
+import { useTranslation } from "react-i18next";
 import SectionHeading from "../components/SectionHeading.jsx";
 import ProjectCard from "../components/ProjectCard.jsx";
-import projects from "../data/projects.js";
+import useLocalizedProjects from "../hooks/useLocalizedProjects.js";
 
-const Projects = () => (
-  <div className="section">
-    <SectionHeading
-      eyebrow="Playground"
-      title="Projects"
-      description="Hands-on projects I've built to practice React, game logic, forms and API integration. Each one is fully playable — click through to try it."
-    />
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {projects.map((project, index) => (
-        <ProjectCard key={project.slug} project={project} index={index} />
-      ))}
+const Projects = () => {
+  const { t } = useTranslation();
+  const projects = useLocalizedProjects();
+
+  return (
+    <div className="section">
+      <SectionHeading
+        eyebrow={t("projectsPage.eyebrow")}
+        title={t("projectsPage.title")}
+        description={t("projectsPage.description")}
+      />
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project, index) => (
+          <ProjectCard key={project.slug} project={project} index={index} />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Projects;

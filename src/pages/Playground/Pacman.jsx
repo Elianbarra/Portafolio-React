@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import PlaygroundShell from "../../components/PlaygroundShell.jsx";
 
 const INITIAL_WORLD = [
@@ -30,6 +31,7 @@ const TILE_ICON = {
 };
 
 const Pacman = () => {
+  const { t } = useTranslation();
   const [world, setWorld] = useState(INITIAL_WORLD);
   const [score, setScore] = useState(0);
   const [player, setPlayer] = useState({ x: 1, y: 1 });
@@ -64,17 +66,14 @@ const Pacman = () => {
   };
 
   return (
-    <PlaygroundShell
-      title="Ninja Man"
-      description="A Pacman-style maze game. Use the arrow keys to move and collect all the sushi and onigiri."
-    >
+    <PlaygroundShell title={t("playground.pacman.title")} description={t("playground.pacman.description")}>
       <div className="flex flex-col items-center gap-6">
         <div className="flex items-center gap-6 font-mono text-sm text-slate-300">
           <span>
-            Score: <span className="text-accent">{score}</span>
+            {t("playground.pacman.score")} <span className="text-accent">{score}</span>
           </span>
           <button onClick={resetGame} className="btn-secondary px-4 py-1.5 text-xs">
-            Reset
+            {t("playground.pacman.reset")}
           </button>
         </div>
 

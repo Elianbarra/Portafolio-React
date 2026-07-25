@@ -1,0 +1,216 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "toggleMenu": "Toggle menu"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "description": "Software developer focused on API integrations and full-stack development with Python and React — building production systems at work and small technical experiments on the side.",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get in Touch"
+  },
+  "roles": ["Software Developer.", "Full-Stack Developer.", "Computer Engineering student."],
+  "stats": {
+    "projectsBuilt": "Projects built",
+    "coreTechnologies": "Core technologies",
+    "softwareInternship": "Software internship"
+  },
+  "home": {
+    "aboutEyebrow": "About",
+    "aboutTitle": "Software developer, builder, hands-on learner",
+    "aboutText": "I'm a software developer with experience in API integrations, process automation and full-stack development. I like picking apart problems, shipping small working demos, and gradually turning that understanding into real, production-ready systems.",
+    "moreAboutMe": "More about me",
+    "techIWorkWith": "Tech I work with",
+    "featuredEyebrow": "Featured",
+    "featuredTitle": "A few things I've built",
+    "featuredDescription": "Small, self-contained projects built to practice React patterns, game logic and API integration.",
+    "seeAllProjects": "See all projects",
+    "ctaEyebrow": "Let's talk",
+    "ctaTitle": "Have a project in mind?",
+    "ctaDescription": "I'm always happy to chat about new ideas, collaborations or internship opportunities.",
+    "ctaButton": "Get in touch"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A bit about me",
+    "subtitle": "Software developer specializing in API integrations, process automation and full-stack development.",
+    "bio1": "I'm a software developer with experience in API integrations, process automation and full-stack development using Python and React. In my current role, I've built production integrations — including Chilexpress, the WhatsApp Business API and Zoho CRM — that improve traceability and standardize commercial workflows.",
+    "bio2": "I focus on scalable, modular architecture and apply good practices around quality, maintainability and continuous improvement in agile environments. I'm currently in my third year of a Computer Engineering degree.",
+    "timelineTitle": "Timeline",
+    "timeline": [
+      {
+        "title": "Software Developer — Selec Soluciones Eléctricas",
+        "period": "Sep 2024 — Present",
+        "description": "Building production integrations (Chilexpress, WhatsApp Business API, Zoho CRM) that streamline commercial workflows — including a WhatsApp chatbot with automated CRM logging, automated shipping cost calculation, and Zoho CRM process automation via Deluge scripting."
+      },
+      {
+        "title": "Computer Engineering — Duoc UC",
+        "period": "2024 — 2026",
+        "description": "Third year of the Computer Engineering program, building a foundation in programming, data structures and web development."
+      },
+      {
+        "title": "Python Developer Intern — Pulso Escolar",
+        "period": "Jan 2024 — Feb 2024",
+        "description": "Automated data analysis workflows in CRM environments using Python, Pandas and NumPy. Evaluated with an outstanding grade at the end of the internship."
+      },
+      {
+        "title": "Professional Programming Technician — Liceo Arturo Matte Larraín",
+        "period": "2022 — 2023",
+        "description": "Completed secondary education with a technical specialization in programming."
+      }
+    ],
+    "skillsTitle": "Programming languages & tools",
+    "toolsTitle": "Also working with",
+    "tools": [
+      "Git & GitHub",
+      "REST APIs",
+      "Webhooks",
+      "Microservices",
+      "Zoho CRM & Deluge",
+      "WhatsApp Business API",
+      "Pandas",
+      "NumPy",
+      "Scrum / Agile"
+    ],
+    "certificationsTitle": "Certifications",
+    "certifications": [
+      "Full-Stack Developer — Coding Dojo",
+      "Programming Analyst",
+      "Professional Programming Technician"
+    ],
+    "languagesTitle": "Languages & skills",
+    "languageTags": [
+      "English (B1)",
+      "Teamwork",
+      "Task planning & tracking",
+      "Proactivity & autonomy",
+      "Process documentation"
+    ]
+  },
+  "projectsPage": {
+    "eyebrow": "Playground",
+    "title": "Projects",
+    "description": "Hands-on projects I've built to practice React, game logic, forms and API integration. Each one is fully playable — click through to try it."
+  },
+  "projectData": {
+    "pacman": {
+      "title": "Ninja Man",
+      "subtitle": "Pacman clone",
+      "description": "A Pacman-style maze game built from a raw 2D grid, with keyboard-driven movement, collision detection and live scoring.",
+      "tags": ["React", "useState", "Keyboard events"]
+    },
+    "tictactoe": {
+      "title": "Tic Tac Toe",
+      "subtitle": "Two-player game",
+      "description": "Classic Tic Tac Toe with win/draw detection across all combinations and a confetti celebration on victory.",
+      "tags": ["React", "Game logic", "canvas-confetti"]
+    },
+    "calculator": {
+      "title": "Calculator",
+      "subtitle": "Arithmetic UI",
+      "description": "A functioning calculator supporting the four basic operations and parentheses, with a light/dark toggle.",
+      "tags": ["JavaScript", "UI state"]
+    },
+    "login": {
+      "title": "Auth Demo",
+      "subtitle": "Login & sign up",
+      "description": "A login/sign-up flow with client-side validation and persistence via localStorage — a sandbox for auth UX patterns.",
+      "tags": ["React", "Forms", "localStorage"]
+    },
+    "colors": {
+      "title": "Color Palette Generator",
+      "subtitle": "Shade generator",
+      "description": "Generates a 5-step shade palette from any base color, with one-click copy to clipboard for each hex value.",
+      "tags": ["React", "values.js", "Clipboard API"]
+    },
+    "gifs": {
+      "title": "GIF Search",
+      "subtitle": "Giphy API",
+      "description": "Searches the Giphy API by keyword and renders the results in a responsive grid.",
+      "tags": ["React", "REST API", "Giphy"]
+    }
+  },
+  "playground": {
+    "backToProjects": "← Back to projects",
+    "pacman": {
+      "title": "Ninja Man",
+      "description": "A Pacman-style maze game. Use the arrow keys to move and collect all the sushi and onigiri.",
+      "score": "Score:",
+      "reset": "Reset"
+    },
+    "tictactoe": {
+      "title": "Tic Tac Toe",
+      "description": "Classic 3x3 grid — get three in a row to win.",
+      "turn": "Turn:",
+      "reset": "Reset",
+      "draw": "It's a draw!",
+      "wins": "{{winner}} wins!",
+      "playAgain": "Play again"
+    },
+    "calculator": {
+      "title": "Calculator",
+      "description": "A basic calculator supporting +, -, *, / and parentheses.",
+      "error": "Error"
+    },
+    "login": {
+      "title": "Auth Demo",
+      "description": "A login and sign-up flow with client-side validation, persisted to localStorage for demo purposes.",
+      "logIn": "Log in",
+      "signUp": "Sign up",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "loginSuccess": "Successful login!",
+      "loginFailed": "Account not found or incorrect credentials.",
+      "passwordMismatch": "Passwords do not match.",
+      "emailTaken": "This email is already registered.",
+      "signupSuccess": "Account created! You can log in now."
+    },
+    "colors": {
+      "title": "Color Palette Generator",
+      "description": "Enter a color name or hex value to generate a shade palette. Click any swatch to copy its hex code.",
+      "placeholder": "e.g. #22d3ee or teal",
+      "generate": "Generate",
+      "invalidColor": "That color doesn't exist — try another name or hex value.",
+      "copied": "Copied!",
+      "clickToCopy": "Click to copy"
+    },
+    "gifs": {
+      "title": "GIF Search",
+      "description": "Search the Giphy API by keyword.",
+      "placeholder": "Search GIFs...",
+      "search": "Search",
+      "loading": "Loading…"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk",
+    "description": "Have a project in mind, or just want to say hi? Send me a message.",
+    "reachOut": "The fastest way to reach me is by email — I try to reply within a day.",
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message"
+    },
+    "errors": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email",
+      "phoneRequired": "Phone number is required",
+      "phoneInvalid": "Invalid phone number",
+      "messageRequired": "This field is required"
+    },
+    "send": "Send message",
+    "sentMessage": "Message sent! (demo — no backend wired up yet)"
+  },
+  "footer": {
+    "builtWith": "© {{year}} Elian Barra. Built with React & Tailwind CSS."
+  }
+}

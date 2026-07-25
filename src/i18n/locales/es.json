@@ -1,0 +1,216 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "toggleMenu": "Abrir menú"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "description": "Desarrollador de software enfocado en integración de APIs y desarrollo full-stack con Python y React — construyendo sistemas productivos en mi trabajo y experimentos técnicos como proyectos personales.",
+    "viewProjects": "Ver Proyectos",
+    "getInTouch": "Contáctame"
+  },
+  "roles": ["Desarrollador de Software.", "Desarrollador Full-Stack.", "Estudiante de Ingeniería en Informática."],
+  "stats": {
+    "projectsBuilt": "Proyectos creados",
+    "coreTechnologies": "Tecnologías principales",
+    "softwareInternship": "Práctica profesional"
+  },
+  "home": {
+    "aboutEyebrow": "Sobre mí",
+    "aboutTitle": "Desarrollador de software, creador, aprendizaje práctico",
+    "aboutText": "Soy desarrollador de software con experiencia en integración de APIs, automatización de procesos y desarrollo full-stack. Me gusta desarmar problemas, crear pequeñas demos funcionales, y transformar gradualmente ese entendimiento en sistemas reales listos para producción.",
+    "moreAboutMe": "Más sobre mí",
+    "techIWorkWith": "Tecnologías con las que trabajo",
+    "featuredEyebrow": "Destacados",
+    "featuredTitle": "Algunas cosas que he creado",
+    "featuredDescription": "Proyectos pequeños y autocontenidos hechos para practicar patrones de React, lógica de juegos e integración de APIs.",
+    "seeAllProjects": "Ver todos los proyectos",
+    "ctaEyebrow": "Hablemos",
+    "ctaTitle": "¿Tienes un proyecto en mente?",
+    "ctaDescription": "Siempre estoy disponible para conversar sobre nuevas ideas, colaboraciones u oportunidades de práctica profesional.",
+    "ctaButton": "Contáctame"
+  },
+  "about": {
+    "eyebrow": "Sobre mí",
+    "title": "Un poco sobre mí",
+    "subtitle": "Desarrollador de software especializado en integración de APIs, automatización de procesos y desarrollo full-stack.",
+    "bio1": "Soy desarrollador de software con experiencia en integración de APIs, automatización de procesos y desarrollo full-stack con Python y React. En mi rol actual he construido integraciones productivas — incluyendo Chilexpress, WhatsApp Business API y Zoho CRM — que mejoran la trazabilidad y estandarizan los flujos comerciales.",
+    "bio2": "Me enfoco en arquitecturas escalables y modulares, aplicando buenas prácticas de calidad, mantenibilidad y mejora continua en entornos ágiles. Actualmente curso tercer año de Ingeniería en Informática.",
+    "timelineTitle": "Trayectoria",
+    "timeline": [
+      {
+        "title": "Software Developer — Selec Soluciones Eléctricas",
+        "period": "Sep 2024 — Presente",
+        "description": "Construyendo integraciones productivas (Chilexpress, WhatsApp Business API, Zoho CRM) que optimizan los flujos comerciales — incluyendo un chatbot de WhatsApp con registro automático en el CRM, cálculo automatizado de costos de envío, y automatización de procesos en Zoho CRM mediante Deluge."
+      },
+      {
+        "title": "Ingeniería en Informática — Duoc UC",
+        "period": "2024 — 2026",
+        "description": "Tercer año de la carrera de Ingeniería en Informática, construyendo una base en programación, estructuras de datos y desarrollo web."
+      },
+      {
+        "title": "Práctica Profesional en Python — Pulso Escolar",
+        "period": "Ene 2024 — Feb 2024",
+        "description": "Automaticé procesos de análisis de datos en entornos CRM utilizando Python, Pandas y NumPy. Desempeño evaluado con calificación sobresaliente al término de la práctica."
+      },
+      {
+        "title": "Técnico de Nivel Medio en Programación — Liceo Arturo Matte Larraín",
+        "period": "2022 — 2023",
+        "description": "Completé la educación media con especialización técnica en programación."
+      }
+    ],
+    "skillsTitle": "Lenguajes y herramientas",
+    "toolsTitle": "También trabajo con",
+    "tools": [
+      "Git y GitHub",
+      "REST APIs",
+      "Webhooks",
+      "Microservicios",
+      "Zoho CRM y Deluge",
+      "WhatsApp Business API",
+      "Pandas",
+      "NumPy",
+      "Scrum / Ágil"
+    ],
+    "certificationsTitle": "Certificaciones",
+    "certifications": [
+      "Desarrollador Full-Stack — Coding Dojo",
+      "Analista en Programación",
+      "Técnico de Nivel Medio en Programación"
+    ],
+    "languagesTitle": "Idiomas y competencias",
+    "languageTags": [
+      "Inglés (B1)",
+      "Trabajo en equipo",
+      "Planificación y seguimiento de tareas",
+      "Proactividad y autonomía",
+      "Organización y documentación de procesos"
+    ]
+  },
+  "projectsPage": {
+    "eyebrow": "Playground",
+    "title": "Proyectos",
+    "description": "Proyectos prácticos que he creado para practicar React, lógica de juegos, formularios e integración de APIs. Cada uno es completamente jugable — haz clic para probarlo."
+  },
+  "projectData": {
+    "pacman": {
+      "title": "Ninja Man",
+      "subtitle": "Clon de Pacman",
+      "description": "Un juego de laberinto estilo Pacman construido sobre una grilla 2D, con movimiento por teclado, detección de colisiones y puntaje en vivo.",
+      "tags": ["React", "useState", "Eventos de teclado"]
+    },
+    "tictactoe": {
+      "title": "Tic Tac Toe",
+      "subtitle": "Juego para dos jugadores",
+      "description": "El clásico Tic Tac Toe con detección de victoria/empate en todas las combinaciones y celebración con confeti al ganar.",
+      "tags": ["React", "Lógica de juego", "canvas-confetti"]
+    },
+    "calculator": {
+      "title": "Calculadora",
+      "subtitle": "Interfaz aritmética",
+      "description": "Una calculadora funcional que soporta las cuatro operaciones básicas y paréntesis, con selector de tema claro/oscuro.",
+      "tags": ["JavaScript", "Estado de UI"]
+    },
+    "login": {
+      "title": "Demo de Autenticación",
+      "subtitle": "Inicio de sesión y registro",
+      "description": "Un flujo de inicio de sesión y registro con validación del lado del cliente y persistencia vía localStorage — un sandbox para patrones de UX de autenticación.",
+      "tags": ["React", "Formularios", "localStorage"]
+    },
+    "colors": {
+      "title": "Generador de Paletas de Color",
+      "subtitle": "Generador de tonalidades",
+      "description": "Genera una paleta de 5 tonalidades a partir de cualquier color base, con copiado al portapapeles con un clic para cada valor hexadecimal.",
+      "tags": ["React", "values.js", "API del portapapeles"]
+    },
+    "gifs": {
+      "title": "Buscador de GIFs",
+      "subtitle": "API de Giphy",
+      "description": "Busca en la API de Giphy por palabra clave y muestra los resultados en una grilla responsiva.",
+      "tags": ["React", "REST API", "Giphy"]
+    }
+  },
+  "playground": {
+    "backToProjects": "← Volver a proyectos",
+    "pacman": {
+      "title": "Ninja Man",
+      "description": "Un juego de laberinto estilo Pacman. Usa las flechas del teclado para moverte y recolectar todo el sushi y onigiri.",
+      "score": "Puntaje:",
+      "reset": "Reiniciar"
+    },
+    "tictactoe": {
+      "title": "Tic Tac Toe",
+      "description": "La clásica grilla 3x3 — consigue tres en línea para ganar.",
+      "turn": "Turno:",
+      "reset": "Reiniciar",
+      "draw": "¡Empate!",
+      "wins": "¡Gana {{winner}}!",
+      "playAgain": "Jugar de nuevo"
+    },
+    "calculator": {
+      "title": "Calculadora",
+      "description": "Una calculadora básica que soporta +, -, *, / y paréntesis.",
+      "error": "Error"
+    },
+    "login": {
+      "title": "Demo de Autenticación",
+      "description": "Un flujo de inicio de sesión y registro con validación del lado del cliente, persistido en localStorage con fines de demostración.",
+      "logIn": "Iniciar sesión",
+      "signUp": "Registrarse",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "confirmPassword": "Confirmar contraseña",
+      "loginSuccess": "¡Inicio de sesión exitoso!",
+      "loginFailed": "Cuenta no encontrada o credenciales incorrectas.",
+      "passwordMismatch": "Las contraseñas no coinciden.",
+      "emailTaken": "Este correo ya está registrado.",
+      "signupSuccess": "¡Cuenta creada! Ya puedes iniciar sesión."
+    },
+    "colors": {
+      "title": "Generador de Paletas de Color",
+      "description": "Ingresa un nombre de color o valor hexadecimal para generar una paleta de tonalidades. Haz clic en cualquier muestra para copiar su código hexadecimal.",
+      "placeholder": "ej. #22d3ee o teal",
+      "generate": "Generar",
+      "invalidColor": "Ese color no existe — prueba con otro nombre o valor hexadecimal.",
+      "copied": "¡Copiado!",
+      "clickToCopy": "Clic para copiar"
+    },
+    "gifs": {
+      "title": "Buscador de GIFs",
+      "description": "Busca en la API de Giphy por palabra clave.",
+      "placeholder": "Buscar GIFs...",
+      "search": "Buscar",
+      "loading": "Cargando…"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos",
+    "description": "¿Tienes un proyecto en mente, o solo quieres saludar? Envíame un mensaje.",
+    "reachOut": "La forma más rápida de contactarme es por correo — intento responder dentro de un día.",
+    "fields": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "message": "Mensaje"
+    },
+    "errors": {
+      "firstNameRequired": "El nombre es obligatorio",
+      "lastNameRequired": "El apellido es obligatorio",
+      "emailRequired": "El correo es obligatorio",
+      "emailInvalid": "Correo inválido",
+      "phoneRequired": "El número de teléfono es obligatorio",
+      "phoneInvalid": "Número de teléfono inválido",
+      "messageRequired": "Este campo es obligatorio"
+    },
+    "send": "Enviar mensaje",
+    "sentMessage": "¡Mensaje enviado! (demo — todavía sin backend conectado)"
+  },
+  "footer": {
+    "builtWith": "© {{year}} Elian Barra. Hecho con React y Tailwind CSS."
+  }
+}

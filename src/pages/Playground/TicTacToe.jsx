@@ -1,5 +1,6 @@
 import { useState } from "react";
 import confetti from "canvas-confetti";
+import { useTranslation } from "react-i18next";
 import PlaygroundShell from "../../components/PlaygroundShell.jsx";
 
 const TURNS = { X: "❌", O: "⭕" };
@@ -34,6 +35,7 @@ const Square = ({ value, onClick, highlighted }) => (
 );
 
 const TicTacToe = () => {
+  const { t } = useTranslation();
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
   const [winner, setWinner] = useState(null);
@@ -63,12 +65,14 @@ const TicTacToe = () => {
   };
 
   return (
-    <PlaygroundShell title="Tic Tac Toe" description="Classic 3x3 grid — get three in a row to win.">
+    <PlaygroundShell title={t("playground.tictactoe.title")} description={t("playground.tictactoe.description")}>
       <div className="flex flex-col items-center gap-8">
         <div className="flex items-center gap-4 font-mono text-sm text-slate-300">
-          <span>Turn: {turn}</span>
+          <span>
+            {t("playground.tictactoe.turn")} {turn}
+          </span>
           <button onClick={resetGame} className="btn-secondary px-4 py-1.5 text-xs">
-            Reset
+            {t("playground.tictactoe.reset")}
           </button>
         </div>
 
@@ -81,10 +85,10 @@ const TicTacToe = () => {
         {winner !== null && (
           <div className="card p-6 text-center">
             <p className="text-lg font-bold text-white">
-              {winner === false ? "It's a draw!" : `${winner} wins!`}
+              {winner === false ? t("playground.tictactoe.draw") : t("playground.tictactoe.wins", { winner })}
             </p>
             <button onClick={resetGame} className="btn-primary mt-4 px-5 py-2 text-sm">
-              Play again
+              {t("playground.tictactoe.playAgain")}
             </button>
           </div>
         )}

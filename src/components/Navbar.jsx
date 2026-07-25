@@ -1,12 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-
-const links = [
-  { to: "/", label: "Home", index: "01" },
-  { to: "/about", label: "About", index: "02" },
-  { to: "/works", label: "Projects", index: "03" },
-  { to: "/contact", label: "Contact", index: "04" },
-];
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher.jsx";
 
 const linkClasses = ({ isActive }) =>
   `font-mono text-sm transition-colors ${
@@ -15,6 +10,14 @@ const linkClasses = ({ isActive }) =>
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
+
+  const links = [
+    { to: "/", label: t("nav.home"), index: "01" },
+    { to: "/about", label: t("nav.about"), index: "02" },
+    { to: "/works", label: t("nav.projects"), index: "03" },
+    { to: "/contact", label: t("nav.contact"), index: "04" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-ink-950/80 backdrop-blur-md">
@@ -33,9 +36,13 @@ const Navbar = () => {
           ))}
         </ul>
 
+        <div className="hidden items-center gap-4 sm:flex">
+          <LanguageSwitcher />
+        </div>
+
         <button
           type="button"
-          aria-label="Toggle menu"
+          aria-label={t("nav.toggleMenu")}
           aria-expanded={open}
           onClick={() => setOpen((prev) => !prev)}
           className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 sm:hidden"
@@ -47,24 +54,27 @@ const Navbar = () => {
       </nav>
 
       {open && (
-        <ul className="flex flex-col gap-1 border-t border-white/5 px-6 pb-4 sm:hidden">
-          {links.map((link) => (
-            <li key={link.to}>
-              <NavLink
-                to={link.to}
-                end={link.to === "/"}
-                onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  `block rounded-lg px-3 py-2.5 font-mono text-sm ${
-                    isActive ? "bg-white/5 text-accent" : "text-slate-300"
-                  }`
-                }
-              >
-                <span className="text-accent/70">{link.index}</span> {link.label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+        <div className="flex flex-col gap-1 border-t border-white/5 px-6 pb-4 sm:hidden">
+          <ul className="flex flex-col gap-1">
+            {links.map((link) => (
+              <li key={link.to}>
+                <NavLink
+                  to={link.to}
+                  end={link.to === "/"}
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    `block rounded-lg px-3 py-2.5 font-mono text-sm ${
+                      isActive ? "bg-white/5 text-accent" : "text-slate-300"
+                    }`
+                  }
+                >
+                  <span className="text-accent/70">{link.index}</span> {link.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+          <LanguageSwitcher className="mt-2 w-fit" />
+        </div>
       )}
     </header>
   );

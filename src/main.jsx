@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import "./i18n/index.js";
 
 import RootLayout from "./layouts/RootLayout.jsx";
 import Home from "./pages/Home.jsx";
