@@ -17,7 +17,7 @@ const CertificationBadge = () => {
           <img
             src={`${base}images/${cert.image}`}
             alt={cert.title}
-            className="h-24 w-24 flex-shrink-0 object-contain"
+            className="h-32 w-auto flex-shrink-0 object-contain"
           />
           <div>
             <h4 className="font-bold text-white">{cert.title}</h4>
