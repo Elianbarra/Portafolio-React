@@ -31,7 +31,11 @@
     "ctaEyebrow": "Hablemos",
     "ctaTitle": "¿Tienes un proyecto en mente?",
     "ctaDescription": "Siempre estoy disponible para conversar sobre nuevas ideas, colaboraciones u oportunidades de práctica profesional.",
-    "ctaButton": "Contáctame"
+    "ctaButton": "Contáctame",
+    "certEyebrow": "Certificado",
+    "certTitle": "Últimas certificaciones",
+    "certDescription": "Construyendo continuamente fundamentos de cloud e IA generativa junto a mi trabajo diario de desarrollo.",
+    "certSeeAll": "Ver todas las certificaciones"
   },
   "about": {
     "eyebrow": "Sobre mí",
@@ -76,6 +80,22 @@
       "Scrum / Ágil"
     ],
     "certificationsTitle": "Certificaciones",
+    "awsCertifications": [
+      {
+        "title": "AWS Cloud Quest: Cloud Practitioner",
+        "badge": "Insignia oficial verificable en Credly (2026)",
+        "description": "Laboratorios prácticos en AWS: EC2 y alta disponibilidad multi-AZ, Auto Scaling y Application Load Balancer, S3, RDS y réplicas de lectura, DynamoDB, EFS, IAM (mínimo privilegio) y VPC peering.",
+        "image": "blob.png",
+        "viewCredential": "Ver credencial en Credly"
+      },
+      {
+        "title": "AWS Cloud Quest: Generative AI Practitioner",
+        "badge": "Insignia oficial verificable en Credly (2026)",
+        "description": "Laboratorios prácticos de IA generativa en AWS: managed prompts y few-shot prompting con Amazon Bedrock Prompt Management, guardrails con denied topics, knowledge bases (RAG) con múltiples data sources en S3, agentes con Amazon Bedrock AgentCore (Gateway, Lambda y DynamoDB), síntesis de voz con Amazon Polly y desarrollo asistido con Amazon Q.",
+        "image": "linkedin_thumb_blob.png",
+        "viewCredential": "Ver credencial en Credly"
+      }
+    ],
     "certifications": [
       "Desarrollador Full-Stack — Coding Dojo",
       "Analista en Programación",

@@ -14,6 +14,8 @@ export const skills = [
   { name: "Oracle SQL Developer", image: `${base}images/Oracle-Logo.png` },
   { name: "TypeScript", image: `${base}images/lg-661dcd60dabf7-TypeScript.webp` },
   { name: "Tailwind CSS", image: `${base}images/tailwindcss_logo_icon_170649.png.webp`, lightChip: true },
+  { name: "AWS", image: `${base}images/Amazon_Web_Services_Logo.svg.png`, lightChip: true },
+  { name: "Kubernetes", image: `${base}images/Kubernetes_logo_without_workmark.svg.png` },
 ];
 
 export default skills;

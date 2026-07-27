@@ -31,7 +31,11 @@
     "ctaEyebrow": "Let's talk",
     "ctaTitle": "Have a project in mind?",
     "ctaDescription": "I'm always happy to chat about new ideas, collaborations or internship opportunities.",
-    "ctaButton": "Get in touch"
+    "ctaButton": "Get in touch",
+    "certEyebrow": "Certified",
+    "certTitle": "Latest certifications",
+    "certDescription": "Continuously building cloud and generative AI fundamentals alongside my day-to-day development work.",
+    "certSeeAll": "See all certifications"
   },
   "about": {
     "eyebrow": "About",
@@ -76,6 +80,22 @@
       "Scrum / Agile"
     ],
     "certificationsTitle": "Certifications",
+    "awsCertifications": [
+      {
+        "title": "AWS Cloud Quest: Cloud Practitioner",
+        "badge": "Officially verified badge on Credly (2026)",
+        "description": "Hands-on labs in AWS: EC2 and multi-AZ high availability, Auto Scaling and Application Load Balancer, S3, RDS and read replicas, DynamoDB, EFS, IAM (least privilege) and VPC peering.",
+        "image": "blob.png",
+        "viewCredential": "View credential on Credly"
+      },
+      {
+        "title": "AWS Cloud Quest: Generative AI Practitioner",
+        "badge": "Officially verified badge on Credly (2026)",
+        "description": "Hands-on generative AI labs on AWS: managed prompts and few-shot prompting with Amazon Bedrock Prompt Management, guardrails with denied topics, knowledge bases (RAG) with multiple S3 data sources, agents with Amazon Bedrock AgentCore (Gateway, Lambda and DynamoDB), voice synthesis with Amazon Polly, and AI-assisted development with Amazon Q.",
+        "image": "linkedin_thumb_blob.png",
+        "viewCredential": "View credential on Credly"
+      }
+    ],
     "certifications": [
       "Full-Stack Developer — Coding Dojo",
       "Programming Analyst",

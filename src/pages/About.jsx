@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import SectionHeading from "../components/SectionHeading.jsx";
+import CertificationBadge from "../components/CertificationBadge.jsx";
 import skills from "../data/skills.js";
 
 const About = () => {
@@ -83,7 +84,8 @@ const About = () => {
       <div className="mt-16 grid gap-10 border-t border-white/5 pt-12 sm:grid-cols-2">
         <div>
           <h3 className="mb-5 text-xl font-bold text-white">{t("about.certificationsTitle")}</h3>
-          <ul className="space-y-3">
+          <CertificationBadge />
+          <ul className="mt-5 space-y-3">
             {certifications.map((cert) => (
               <li key={cert} className="flex items-start gap-3 text-sm text-slate-300">
                 <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />

@@ -10,6 +10,7 @@ import SectionHeading from "../components/SectionHeading.jsx";
 import SocialLinks from "../components/SocialLinks.jsx";
 import StatCounter from "../components/StatCounter.jsx";
 import TechMarquee from "../components/TechMarquee.jsx";
+import CertificationBadge from "../components/CertificationBadge.jsx";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -149,6 +150,26 @@ const Home = () => {
             <TechMarquee />
           </motion.div>
         </div>
+      </section>
+
+      <section className="border-t border-white/5">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="section py-16"
+        >
+          <SectionHeading
+            eyebrow={t("home.certEyebrow")}
+            title={t("home.certTitle")}
+            description={t("home.certDescription")}
+          />
+          <CertificationBadge />
+          <Link to="/about" className="btn-secondary mt-8 inline-flex">
+            {t("home.certSeeAll")}
+          </Link>
+        </motion.div>
       </section>
 
       <section className="border-t border-white/5">
