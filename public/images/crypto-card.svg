@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="100%" stop-color="#10141d"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="360" fill="url(#bg)"/>
+
+  <g stroke="#94a3b8" stroke-opacity="0.08">
+    <line x1="0" y1="60" x2="640" y2="60"/>
+    <line x1="0" y1="120" x2="640" y2="120"/>
+    <line x1="0" y1="180" x2="640" y2="180"/>
+    <line x1="0" y1="240" x2="640" y2="240"/>
+    <line x1="0" y1="300" x2="640" y2="300"/>
+    <line x1="80" y1="0" x2="80" y2="360"/>
+    <line x1="200" y1="0" x2="200" y2="360"/>
+    <line x1="320" y1="0" x2="320" y2="360"/>
+    <line x1="440" y1="0" x2="440" y2="360"/>
+    <line x1="560" y1="0" x2="560" y2="360"/>
+  </g>
+
+  <path d="M0,280 L60,300 L120,250 L180,260 L240,190 L300,210 L360,150 L420,170 L480,110 L540,130 L640,60 L640,360 L0,360 Z" fill="url(#fill)"/>
+  <path d="M0,280 L60,300 L120,250 L180,260 L240,190 L300,210 L360,150 L420,170 L480,110 L540,130 L640,60" fill="none" stroke="url(#line)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(90,80)">
+    <circle r="34" fill="#0f1420" stroke="#f7931a" stroke-width="2.5"/>
+    <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="30" fill="#f7931a">₿</text>
+  </g>
+  <g transform="translate(300,60)">
+    <circle r="26" fill="#0f1420" stroke="#8296ff" stroke-width="2.5"/>
+    <text x="0" y="9" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="22" fill="#8296ff">Ξ</text>
+  </g>
+  <g transform="translate(520,150)">
+    <circle r="22" fill="#0f1420" stroke="#22d3ee" stroke-width="2.5"/>
+    <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#22d3ee">$</text>
+  </g>
+</svg>

@@ -11,13 +11,15 @@ import SocialLinks from "../components/SocialLinks.jsx";
 import StatCounter from "../components/StatCounter.jsx";
 import TechMarquee from "../components/TechMarquee.jsx";
 import CertificationBadge from "../components/CertificationBadge.jsx";
+import CryptoMiniWidget from "../components/CryptoMiniWidget.jsx";
 
 const Home = () => {
   const { t } = useTranslation();
   const roles = t("roles", { returnObjects: true });
   const typedText = useTypewriter(roles);
   const projects = useLocalizedProjects();
-  const featured = projects.slice(0, 3);
+  const cryptoProject = projects.find((project) => project.slug === "crypto");
+  const featured = projects.filter((project) => project.slug !== "crypto").slice(0, 3);
   const nextSectionRef = useRef(null);
 
   const stats = [
@@ -119,6 +121,44 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {cryptoProject && (
+        <section className="border-t border-white/5">
+          <div className="section py-16">
+            <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                <p className="eyebrow mb-3">{t("home.cryptoEyebrow")}</p>
+                <h2 className="heading-xl">{t("home.cryptoTitle")}</h2>
+                <p className="mt-4 text-slate-400">{t("home.cryptoDescription")}</p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {cryptoProject.tags.map((tag) => (
+                    <span key={tag} className="tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <Link to={cryptoProject.route} className="btn-primary mt-8 inline-flex">
+                  {t("home.cryptoButton")}
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <CryptoMiniWidget />
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="border-t border-white/5">
         <div className="section py-16">

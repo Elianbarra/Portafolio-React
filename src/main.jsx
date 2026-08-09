@@ -15,6 +15,9 @@ import Calculator from "./pages/Playground/Calculator.jsx";
 import LoginDemo from "./pages/Playground/LoginDemo.jsx";
 import Colors from "./pages/Playground/Colors.jsx";
 import GifSearch from "./pages/Playground/GifSearch.jsx";
+import Markets from "./pages/Playground/Markets.jsx";
+import CryptoDetail from "./pages/Playground/CryptoDetail.jsx";
+import StockDetail from "./pages/Playground/StockDetail.jsx";
 
 const router = createHashRouter([
   {
@@ -31,6 +34,9 @@ const router = createHashRouter([
       { path: "playground/login", element: <LoginDemo /> },
       { path: "playground/colors", element: <Colors /> },
       { path: "playground/gifs", element: <GifSearch /> },
+      { path: "playground/markets", element: <Markets /> },
+      { path: "playground/markets/crypto/:coinId", element: <CryptoDetail /> },
+      { path: "playground/markets/stock/:symbol", element: <StockDetail /> },
     ],
   },
 ]);

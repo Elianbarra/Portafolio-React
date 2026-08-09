@@ -24,8 +24,12 @@
     "aboutText": "I'm a software developer with experience in API integrations, process automation and full-stack development. I like picking apart problems, shipping small working demos, and gradually turning that understanding into real, production-ready systems.",
     "moreAboutMe": "More about me",
     "techIWorkWith": "Tech I work with",
-    "featuredEyebrow": "Featured",
-    "featuredTitle": "A few things I've built",
+    "cryptoEyebrow": "Featured Project",
+    "cryptoTitle": "Live Markets Tracker",
+    "cryptoDescription": "A real-time dashboard for crypto, stocks and ETFs with historical price charts, built to practice working with live market data, REST APIs and hand-rolled SVG data visualization.",
+    "cryptoButton": "Open Markets Tracker",
+    "featuredEyebrow": "More Projects",
+    "featuredTitle": "More things I've built",
     "featuredDescription": "Small, self-contained projects built to practice React patterns, game logic and API integration.",
     "seeAllProjects": "See all projects",
     "ctaEyebrow": "Let's talk",
@@ -151,10 +155,22 @@
       "subtitle": "Giphy API",
       "description": "Searches the Giphy API by keyword and renders the results in a responsive grid.",
       "tags": ["React", "REST API", "Giphy"]
+    },
+    "crypto": {
+      "title": "Markets Tracker",
+      "subtitle": "Live market data",
+      "description": "Live prices and historical charts for cryptocurrencies, stocks and ETFs — top 20 coins by market cap plus a curated stock/ETF watchlist, with search.",
+      "tags": ["React", "REST API", "CoinGecko", "Twelve Data"]
     }
   },
   "playground": {
     "backToProjects": "← Back to projects",
+    "marketsTitle": "Markets Tracker",
+    "marketsDescription": "Live prices and historical charts for cryptocurrencies, stocks and ETFs.",
+    "tabs": {
+      "crypto": "Crypto",
+      "stocks": "Stocks & ETFs"
+    },
     "pacman": {
       "title": "Ninja Man",
       "description": "A Pacman-style maze game. Use the arrow keys to move and collect all the sushi and onigiri.",
@@ -204,6 +220,43 @@
       "placeholder": "Search GIFs...",
       "search": "Search",
       "loading": "Loading…"
+    },
+    "crypto": {
+      "title": "Crypto Tracker",
+      "description": "Live prices for the top 20 cryptocurrencies by market cap, updated from the CoinGecko API.",
+      "detailDescription": "Historical price chart and market stats.",
+      "backToTracker": "← Back to Markets Tracker",
+      "rank": "Market Cap Rank",
+      "high24h": "24h High",
+      "low24h": "24h Low",
+      "searchPlaceholder": "Search by name or symbol...",
+      "loading": "Loading market data…",
+      "error": "Couldn't load market data right now — try again in a moment.",
+      "noResults": "No coins match your search.",
+      "attribution": "Data provided by CoinGecko",
+      "columns": {
+        "name": "Name",
+        "price": "Price",
+        "change": "24h",
+        "marketCap": "Market Cap",
+        "trend": "7d Trend"
+      }
+    },
+    "stocks": {
+      "detailDescription": "Historical price chart and market stats.",
+      "loading": "Loading market data…",
+      "error": "Couldn't load market data right now — try again in a moment.",
+      "attribution": "Data provided by Twelve Data",
+      "marketOpen": "Market open",
+      "marketClosed": "Market closed",
+      "open": "Open",
+      "volume": "Volume",
+      "columns": {
+        "name": "Name",
+        "exchange": "Exchange",
+        "price": "Price",
+        "change": "24h"
+      }
     }
   },
   "contact": {

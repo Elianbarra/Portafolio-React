@@ -31,6 +31,11 @@ export const projects = [
     image: `${base}images/gifs.png`,
     route: "/playground/gifs",
   },
+  {
+    slug: "crypto",
+    image: `${base}images/crypto-card.svg`,
+    route: "/playground/markets",
+  },
 ];
 
 export default projects;

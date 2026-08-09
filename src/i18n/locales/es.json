@@ -24,8 +24,12 @@
     "aboutText": "Soy desarrollador de software con experiencia en integración de APIs, automatización de procesos y desarrollo full-stack. Me gusta desarmar problemas, crear pequeñas demos funcionales, y transformar gradualmente ese entendimiento en sistemas reales listos para producción.",
     "moreAboutMe": "Más sobre mí",
     "techIWorkWith": "Tecnologías con las que trabajo",
-    "featuredEyebrow": "Destacados",
-    "featuredTitle": "Algunas cosas que he creado",
+    "cryptoEyebrow": "Proyecto Destacado",
+    "cryptoTitle": "Markets Tracker en Vivo",
+    "cryptoDescription": "Un dashboard en tiempo real de cripto, acciones y ETFs con gráficos históricos de precios, construido para practicar el manejo de datos de mercado en vivo, APIs REST y visualización de datos con SVG hecho a mano.",
+    "cryptoButton": "Abrir Markets Tracker",
+    "featuredEyebrow": "Más Proyectos",
+    "featuredTitle": "Más cosas que he creado",
     "featuredDescription": "Proyectos pequeños y autocontenidos hechos para practicar patrones de React, lógica de juegos e integración de APIs.",
     "seeAllProjects": "Ver todos los proyectos",
     "ctaEyebrow": "Hablemos",
@@ -151,10 +155,22 @@
       "subtitle": "API de Giphy",
       "description": "Busca en la API de Giphy por palabra clave y muestra los resultados en una grilla responsiva.",
       "tags": ["React", "REST API", "Giphy"]
+    },
+    "crypto": {
+      "title": "Markets Tracker",
+      "subtitle": "Datos de mercado en vivo",
+      "description": "Precios en vivo y gráficos históricos de criptomonedas, acciones y ETFs — las 20 principales criptomonedas por capitalización de mercado más una selección de acciones/ETFs, con buscador.",
+      "tags": ["React", "REST API", "CoinGecko", "Twelve Data"]
     }
   },
   "playground": {
     "backToProjects": "← Volver a proyectos",
+    "marketsTitle": "Markets Tracker",
+    "marketsDescription": "Precios en vivo y gráficos históricos de criptomonedas, acciones y ETFs.",
+    "tabs": {
+      "crypto": "Cripto",
+      "stocks": "Acciones y ETFs"
+    },
     "pacman": {
       "title": "Ninja Man",
       "description": "Un juego de laberinto estilo Pacman. Usa las flechas del teclado para moverte y recolectar todo el sushi y onigiri.",
@@ -204,6 +220,43 @@
       "placeholder": "Buscar GIFs...",
       "search": "Buscar",
       "loading": "Cargando…"
+    },
+    "crypto": {
+      "title": "Crypto Tracker",
+      "description": "Precios en vivo de las 20 principales criptomonedas por capitalización de mercado, actualizados desde la API de CoinGecko.",
+      "detailDescription": "Gráfico histórico de precios y estadísticas de mercado.",
+      "backToTracker": "← Volver al Markets Tracker",
+      "rank": "Ranking por Cap. de Mercado",
+      "high24h": "Máximo 24h",
+      "low24h": "Mínimo 24h",
+      "searchPlaceholder": "Buscar por nombre o símbolo...",
+      "loading": "Cargando datos del mercado…",
+      "error": "No se pudieron cargar los datos del mercado — intenta de nuevo en un momento.",
+      "noResults": "Ninguna moneda coincide con tu búsqueda.",
+      "attribution": "Datos proporcionados por CoinGecko",
+      "columns": {
+        "name": "Nombre",
+        "price": "Precio",
+        "change": "24h",
+        "marketCap": "Cap. de mercado",
+        "trend": "Tendencia 7d"
+      }
+    },
+    "stocks": {
+      "detailDescription": "Gráfico histórico de precios y estadísticas de mercado.",
+      "loading": "Cargando datos del mercado…",
+      "error": "No se pudieron cargar los datos del mercado — intenta de nuevo en un momento.",
+      "attribution": "Datos proporcionados por Twelve Data",
+      "marketOpen": "Mercado abierto",
+      "marketClosed": "Mercado cerrado",
+      "open": "Apertura",
+      "volume": "Volumen",
+      "columns": {
+        "name": "Nombre",
+        "exchange": "Bolsa",
+        "price": "Precio",
+        "change": "24h"
+      }
     }
   },
   "contact": {
