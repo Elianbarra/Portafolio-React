@@ -84,22 +84,30 @@
       "Scrum / Ágil"
     ],
     "certificationsTitle": "Certificaciones",
-    "awsCertifications": [
+    "certificationBadges": [
       {
         "title": "AWS Cloud Quest: Cloud Practitioner",
         "badge": "Insignia oficial verificable en Credly (2026)",
         "description": "Laboratorios prácticos en AWS: EC2 y alta disponibilidad multi-AZ, Auto Scaling y Application Load Balancer, S3, RDS y réplicas de lectura, DynamoDB, EFS, IAM (mínimo privilegio) y VPC peering.",
         "image": "blob.png",
-        "viewCredential": "Ver credencial en Credly"
+        "credentialUrl": "https://www.credly.com/users/elian-barra/badges/credly"
       },
       {
         "title": "AWS Cloud Quest: Generative AI Practitioner",
         "badge": "Insignia oficial verificable en Credly (2026)",
         "description": "Laboratorios prácticos de IA generativa en AWS: managed prompts y few-shot prompting con Amazon Bedrock Prompt Management, guardrails con denied topics, knowledge bases (RAG) con múltiples data sources en S3, agentes con Amazon Bedrock AgentCore (Gateway, Lambda y DynamoDB), síntesis de voz con Amazon Polly y desarrollo asistido con Amazon Q.",
         "image": "linkedin_thumb_blob.png",
-        "viewCredential": "Ver credencial en Credly"
+        "credentialUrl": "https://www.credly.com/users/elian-barra/badges/credly"
+      },
+      {
+        "title": "Certificado en Marketing Digital",
+        "badge": "HubSpot Academy · Válido ago 2026 – sept 2028",
+        "description": "Competente en marketing digital con mentalidad inbound: creación de contenidos para motores de búsqueda, optimización de un sitio web, estrategia de redes sociales, uso de videos para atraer audiencia, amplificación de mensajes con publicidad de pago y medición de resultados de los esfuerzos de marketing.",
+        "image": "hubspot-digital-marketing-badge.png",
+        "credentialUrl": "https://app.hubspot.com/academy/achievements/xmfhmxyj/es/1/elian-barra/certificado-en-marketing-digital"
       }
     ],
+    "viewCredentialLabel": "Ver credencial",
     "certifications": [
       "Desarrollador Full-Stack — Coding Dojo",
       "Analista en Programación",

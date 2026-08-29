@@ -84,22 +84,30 @@
       "Scrum / Agile"
     ],
     "certificationsTitle": "Certifications",
-    "awsCertifications": [
+    "certificationBadges": [
       {
         "title": "AWS Cloud Quest: Cloud Practitioner",
         "badge": "Officially verified badge on Credly (2026)",
         "description": "Hands-on labs in AWS: EC2 and multi-AZ high availability, Auto Scaling and Application Load Balancer, S3, RDS and read replicas, DynamoDB, EFS, IAM (least privilege) and VPC peering.",
         "image": "blob.png",
-        "viewCredential": "View credential on Credly"
+        "credentialUrl": "https://www.credly.com/users/elian-barra/badges/credly"
       },
       {
         "title": "AWS Cloud Quest: Generative AI Practitioner",
         "badge": "Officially verified badge on Credly (2026)",
         "description": "Hands-on generative AI labs on AWS: managed prompts and few-shot prompting with Amazon Bedrock Prompt Management, guardrails with denied topics, knowledge bases (RAG) with multiple S3 data sources, agents with Amazon Bedrock AgentCore (Gateway, Lambda and DynamoDB), voice synthesis with Amazon Polly, and AI-assisted development with Amazon Q.",
         "image": "linkedin_thumb_blob.png",
-        "viewCredential": "View credential on Credly"
+        "credentialUrl": "https://www.credly.com/users/elian-barra/badges/credly"
+      },
+      {
+        "title": "Digital Marketing Certification",
+        "badge": "HubSpot Academy · Valid Aug 2026 – Sep 2028",
+        "description": "Competent in digital marketing with an inbound mindset: creating content for search engines, optimizing a website, building a social media strategy, using video to attract an audience, amplifying messages with paid advertising, and measuring the results of marketing efforts.",
+        "image": "hubspot-digital-marketing-badge.png",
+        "credentialUrl": "https://app.hubspot.com/academy/achievements/xmfhmxyj/es/1/elian-barra/certificado-en-marketing-digital"
       }
     ],
+    "viewCredentialLabel": "View credential",
     "certifications": [
       "Full-Stack Developer — Coding Dojo",
       "Programming Analyst",
